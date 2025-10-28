@@ -1,0 +1,117 @@
+.app {
+  text-align: center;
+  padding: 20px;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: fixed;
+}
+
+.title {
+  color: blue;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.input {
+  padding: 10px 15px;
+  font-size: medium;
+  border: 2px solid blueviolet;
+  border-radius: 4px;
+  min-width: fit-content;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.loading {
+  color: skyblue;
+  font-size: medium;
+}
+
+.weatherCard {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 6px black(0, 0, 0, 0.1);
+  max-width: fit-content;
+  margin-top: 20px;
+}
+
+.cityName {
+  color: blue;
+  margin-bottom: 15px;
+}
+
+.temperature {
+  font-size: medium;
+  font-weight: bold;
+  color: deepskyblue;
+  margin: 10px 0;
+}
+
+.description {
+  text-transform: capitalize;
+  font-size: medium;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid lightgray;
+  padding-top: 15px;
+}
+
+.details p {
+  margin: 5px 0;
+  color: gray;
+}
+
+.autocomplete {
+  position: relative;
+  width: 100%;
+  max-width: fit-content;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid blueviolet;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: fit-content;
+  overflow-y: auto;
+  z-index: auto;
+}
+
+.suggestions li {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid lightgray;
+}
+
+.suggestions li:hover {
+  background-color: azure;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}
