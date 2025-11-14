@@ -20,12 +20,21 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.form button {
+  height: fit-content;
+  min-width: fit-content;
+  font-size: 14px;
+}
+
 .input {
   padding: 10px 15px;
-  font-size: medium;
+  font-size: 14px;
   border: 2px solid blueviolet;
   border-radius: 4px;
-  min-width: fit-content;
+  width: 100%;
+  height: 36.5px;
+  box-sizing: border-box;
 }
 
 .error {
@@ -82,7 +91,6 @@
 .autocomplete {
   position: relative;
   width: 100%;
-  max-width: fit-content;
 }
 
 .suggestions {
@@ -97,15 +105,17 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: fit-content;
+  max-height: 200px;
   overflow-y: auto;
-  z-index: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .suggestions li {
   padding: 10px 15px;
   cursor: pointer;
   border-bottom: 1px solid lightgray;
+  background-color: white;
 }
 
 .suggestions li:hover {
@@ -115,3 +125,429 @@
 .suggestions li:last-child {
   border-bottom: none;
 }
+.forecast {
+  width: 100%;
+  max-width: fit-content;
+  margin-top: 30px;
+}
+
+.forecastContainer {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.forecastCard {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  min-width: fit-content;
+  box-shadow: 0 2px 4px black(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.forecastDate {
+  font-weight: bold;
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.forecastTemp {
+  font-size: medium;
+  font-weight: bold;
+  color: deepskyblue;
+  margin: 10px 0;
+}
+
+.forecastDescription {
+  text-transform: capitalize;
+  color: gray;
+  font-size: medium;
+}
+
+.forecastCard img {
+  width: 60px;
+  height: 60px;
+}
+
+.searchForm {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+
+.searchForm button {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 200px;
+}
+
+.suggestionActive {
+  background-color: #1565c0 !important;
+  color: white !important;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.buttonGroup button {
+  height: 36.5px;
+  padding: 6px 16px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.navigationButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar {
+  background-color: blue;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 30px;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navTitle {
+  color: white;
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.navLink:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navLinkActive {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+.sectionTitle {
+  color: blue;
+  font-size: 24px;
+  margin: 30px 0 20px 0;
+  text-align: center;
+}
+
+.hourlyForecast {
+  width: 100%;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  border-bottom: 2px solid lightgray;
+}
+
+.hourlyContainer {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  max-width: fit-content;
+}
+
+.hourlyCard {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  min-width: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.hourlyTime {
+  font-weight: bold;
+  color: blue;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.hourlyTemp {
+  font-size: 20px;
+  font-weight: bold;
+  color: deepskyblue;
+  margin: 10px 0;
+}
+
+.hourlyDescription {
+  text-transform: capitalize;
+  color: gray;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.hourlyDetail {
+  font-size: 12px;
+  color: gray;
+  margin: 5px 0;
+}
+
+.hourlyCard img {
+  width: 50px;
+  height: 50px;
+}
+
+.weatherIcon {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+}
+
+.weatherIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hourlyIcon {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+}
+
+.hourlyIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.forecastIcon {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+}
+
+.forecastIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.languageSwitcher {
+  display: flex;
+  gap: 5px;
+}
+
+.langButton, .langActive {
+  padding: 6px 12px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.langButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.langActive {
+  background: skyblue;
+  color: blue;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hourlyCard:hover,
+.forecastCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+
+  .navContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .navTitle {
+    font-size: 24px;
+  }
+
+  .navLink,
+  .navLinkActive {
+    width: 100%;
+    text-align: center;
+  }
+
+  .languageSwitcher {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .searchForm {
+    max-width: 100%;
+  }
+
+  .buttonGroup {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .buttonGroup button {
+    width: 100%;
+  }
+
+  .weatherCard {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cityName {
+    font-size: 24px;
+  }
+
+  .temperature {
+    font-size: 48px;
+  }
+
+  .hourlyForecast,
+  .forecast {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .hourlyContainer,
+  .forecastContainer {
+    justify-content: flex-start;
+    padding: 10px 5px;
+  }
+
+  .hourlyCard,
+  .forecastCard {
+    min-width: 140px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+    margin: 20px 0 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navTitle {
+    font-size: 20px;
+  }
+
+  .hourlyCard,
+  .forecastCard {
+    min-width: 120px;
+    padding: 10px;
+  }
+
+  .weatherIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hourlyIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .forecastIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .temperature {
+    font-size: 36px;
+  }
+
+  .cityName {
+    font-size: 20px;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, white 25%, white 50%, white 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+  border-radius: 10px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+
