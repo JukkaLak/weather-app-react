@@ -6,7 +6,7 @@ export const translations = {
             forecast: "5-day forecast"
         },
         search: {
-            placeholder: "Enter location: ",
+            placeholder: "Enter location",
             searchButton: "Search",
             useLocation: "Use current location"
         },
@@ -34,7 +34,7 @@ export const translations = {
             forecast: "Viiden päivän ennuste"
         },
         search: {
-            placeholder: "Syötä sijainti: ",
+            placeholder: "Syötä sijainti",
             searchButton: "Hae",
             useLocation: "Käytä nykyistä sijaintia"
         },

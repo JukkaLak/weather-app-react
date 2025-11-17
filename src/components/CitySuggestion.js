@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from 'react-i18next'
 import styles from '../styles.module.css'
 
 export default function CitySuggestion({ onSelectCity, onManualSearch }) {
+    const { t } = useTranslation();
     const [input, setInput] = useState("");
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -98,7 +100,7 @@ export default function CitySuggestion({ onSelectCity, onManualSearch }) {
                   ref={inputRef} 
                   className={styles.input}
                   type="text"
-                  placeholder="Enter city"
+                  placeholder={t('search.placeholder')}
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
